@@ -14,7 +14,7 @@ public class CardOrderTest {
 
     @BeforeAll
     static void setUp() {
-        Configuration.headless = false;
+        Configuration.headless = true;
     }
 
     RegistrationByCardInfo info = DataGenerator.Registration.generateByCard("ru", 3, 5);
