@@ -8,4 +8,4 @@
 
 Вам нужно: взять ваш проект (см. "Как сдавать задачи") и прикрутить туда Allure, интегрированный с Selenide. Удостоверьтесь, что при локальном запуске всё работает, отчёты генерируются, скриншоты прикрепляются и вы можете их посмотреть через Allure.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/4duuc4k0l2hlkh8b?svg=true)](https://ci.appveyor.com/project/aremarss/report-allure)
+CI: [![Build status](https://ci.appveyor.com/api/projects/status/4duuc4k0l2hlkh8b?svg=true)](https://ci.appveyor.com/project/aremarss/report-allure)
