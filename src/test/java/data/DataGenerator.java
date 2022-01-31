@@ -1,3 +1,5 @@
+package data;
+
 import com.github.javafaker.Faker;
 
 import java.time.LocalDate;
@@ -13,9 +15,9 @@ public class DataGenerator {
         private Registration() {
         }
 
-        public static RegistrationByCardInfo generateByCard(String locale, int days, int changeDays) {
+        public static RegByCardInfo generateByCard(String locale, int days, int changeDays) {
             Faker faker = new Faker(new Locale(locale));
-            return new RegistrationByCardInfo(
+            return new RegByCardInfo(
                     faker.address().city(),
                     LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern("dd.MM.yyyy")),
                     LocalDate.now().plusDays(changeDays).format(DateTimeFormatter.ofPattern("dd.MM.yyyy")),

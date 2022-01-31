@@ -1,11 +1,13 @@
-public class RegistrationByCardInfo {
+package data;
+
+public class RegByCardInfo {
     private final String city;
     private final String date;
     private final String changeDate;
     private final String name;
     private final String phone;
 
-    public RegistrationByCardInfo(String city, String date, String changeDate, String name, String phone) {
+    public RegByCardInfo(String city, String date, String changeDate, String name, String phone) {
         this.city = city;
         this.date = date;
         this.changeDate = changeDate;

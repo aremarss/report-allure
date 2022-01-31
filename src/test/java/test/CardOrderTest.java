@@ -1,4 +1,10 @@
-import com.codeborne.selenide.Configuration;
+package test;
+
+import com.codeborne.selenide.logevents.SelenideLogger;
+import data.DataGenerator;
+import data.RegByCardInfo;
+import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
@@ -12,12 +18,17 @@ import static java.time.Duration.*;
 
 public class CardOrderTest {
 
+    RegByCardInfo info = DataGenerator.Registration.generateByCard("ru", 3, 5);
+
     @BeforeAll
-    static void setUp() {
-        Configuration.headless = true;
+    static void addListener(){
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(false));
     }
 
-    RegistrationByCardInfo info = DataGenerator.Registration.generateByCard("ru", 3, 5);
+    @AfterAll
+    static void removeListener(){
+        SelenideLogger.removeListener("AllureSelenide");
+    }
 
     @Test
     void shouldReturnSuccess() {
